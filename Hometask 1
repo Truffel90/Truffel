@@ -1,0 +1,30 @@
+Первое ДЗ до 04.10.2021 Linux terminal (GitBash) commands
+1) pwd
+3) cd Proba_1
+4) mkdir Folder_1
+   mkdir Folder_2 
+   mkdir Folder_3
+5) cd Folder_1
+6) touch test_1.txt
+ 	 touch test_2.txt
+ 	 touch test_3.txt 
+   touch test_4.json 
+   touch test_5.json
+7) mkdir Folder_4
+   mkdir Folder_5
+   mkdir Folder_6
+8) ls
+9) cat test_1.txt
+10) vim test_1.txt «Text»
+11) Ctrl+D     :wq
+12) cd ..
+13) mv test_4.json folder_2
+    mv test_2.txt folder_5
+14) cp test_1.txt folder_1
+    cp test_3.txt folder_6
+15) find test_3.txt
+16) grep ‘weather’ test_3.txt
+17) grep –An test_3.txt
+18) grep –Bn test_3.txt 
+19) less test_5.txt
+20) date
