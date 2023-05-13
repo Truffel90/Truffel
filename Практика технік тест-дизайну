@@ -1,0 +1,168 @@
+Must have рівень:
+
+1. Яке твердження щодо діаграми переходу станів і таблиці з тест-кейсами є вірним?
+
+
+Тест-кейс
+1
+2
+3
+4
+5
+Стан початку
+S1 
+S2 
+S2
+
+
+ S3 
+S3
+
+
+Живлення
+Power On
+Power Off
+RC On
+RC off
+Power Off
+Стан завершення
+S2
+S1
+S3
+S2
+S1
+
+
+Дані тест-кейси покривають валідні і невалідні переходи на діаграмі.
+Дані тест-кейси показують всі можливі валідні переходи на діаграмі.
+Дані тест-кейси покривають деякі валідні переходи на діаграмі.
+Дані тест-кейси покривають пари переходів на діаграмі.
+
+2. Співробітникам компанії виплачують бонуси за умови, що вони пропрацювати більше ніж рік та виконали заздалегідь поставлені цілі. 
+
+Ці умови можна подати у вигляді таблиці рішень:
+
+
+
+
+Тест
+
+
+Т1
+Т2
+Т3 
+Т4
+Умова 1: 
+Стаж більше року?
+Так
+Ні
+Ні
+Так
+Умова 2
+Ціль поставлена?
+Ні
+Ні
+Так
+Так
+Умова 3
+Ціль досягнута?
+Ні
+Ні
+Так
+Так
+Дія
+Виплата бонуса
+Ні
+Ні
+Ні
+Так
+
+
+Який сценарій, що є ймовірним в реальному житті, пропущений в таблиці?
+Умова 1 = ТАК, Умова 2 = НІ, Умова 3 = ТАК, Дія = НІ
+Умова 1 = ТАК, Умова 2 = ТАК, Умова 3 = НІ, Дія = ТАК
+Умова 1 = НІ, Умова 2 = НІ, Умова 3 = ТАК, Дія = НІ
+Умова 1 = НІ, Умова 2 = ТАК, Умова 3 = НІ, Дія = НІ
+
+
+Середній рівень:
+
+1. Виконай завдання попереднього рівня.
+
+2. Склади діаграму станів і переходів для тестування відеогри:
+Після запуску гри ти опиняєшся в «Замку загадок», у кімнаті з двома коридорами — направо і наліво.
+Якщо піти направо — потрапляєш до дракона. Дракон загадує тобі загадку. Якщо відповідь правильна — виходиш із замку та виграєш. Якщо неправильна — дракон загадує ще одну загадку. Якщо ти вдруге відповідаєш неправильно — дракон тебе з'їдає і ти програєш.
+Якщо піти наліво — потрапиш до відьми. Відьма загадує загадку, якщо відповідь правильна — виходиш із замку і виграєш. Якщо відповідь неправильна — відьма переносить тебе до дракона.
+
+
+
+
+3. Скільки тест-кейсів, відповідно до складеної діаграми, буде достатньо, щоб протестувати цю гру?
+
+Наче 7, якщо рахувати так: 
+“замок” → загадка 1 —> вірно—->перемога, 
+“замок” —>загадка 1 —>невірно —--> загадка 2 —-->вірно—-> перемога,
+ “замок” —>загадка 1 —>невірно —--> загадка 2 —-->невірно —->програш, 
+“замок” —>відьма —>вірно—->перемога, 
+“замок” —>відьма —>невірно—->загадка 1—--->вірно—->перемога,
+ “замок” —>відьма —>невірно—->загадка 1—--->невірно—->загадка 2 —-->вірно —->перемога, 
+“замок” —>відьма —>невірно—->загадка 1—--->невірно—->загадка 2 —-->невірно —->програш, 
+
+
+Програма максимум:
+
+Виконай завдання двох попередніх рівнів.
+Продовжуємо розвивати стартап для застосунку, який дозволяє обмінюватися фотографіями котиків.
+
+а. Напиши 5 use-кейсів для типової поведінки користувача твого застосунку. 
+б. Намалюй схему переходу станів на основі написаних користувацьких сценаріїв та склади таблицю рішень для одного з варіантів.
+
+
+1.
+Use Case ID
+1.00
+Use Case ID Name
+Add picture
+Use Case Description
+User can add new picture into profile
+Actor
+System user
+Precondition
+User is logged in the application and opened main page of profile
+Postcondition
+New picture is added to user’s profile
+Basic Flow
+1. User selecting file from device that is going to be added to the profile
+2. System validates selected file for the supported extension (jpeg, pdf) and size (to 100 MB including) 
+3. System uploads file to the profile
+Extensions
+2a. File is not in supported extension (xlsx, docx) System displays message "Please select file in jpeg, pdf format" 
+2b. File size is more than 100 MB System displays message "Please select file less than 100 MB" 
+
+
+2.
+
+Use Case ID
+2.00
+Use Case ID Name
+Write a description to uploaded picture
+Use Case Description
+User can write a description to uploaded picture
+Actor
+System user
+Precondition
+User is logged in the application and uploaded new picture to the profile
+Postcondition
+Description is added to a new picture
+Basic Flow
+1. User writes a text description to the uploaded picture
+2. System validates written text by amount of symbols(min - 10 symbols, max - 200 symbols)
+3. System adds the description to the picture
+Extensions
+2a. Symbols amount is less than 10. System displays message "Please write longer description" 
+2b. Symbols amount is more than 200. System displays message "Please write shorter description" 
+ 
+
+
+
+
